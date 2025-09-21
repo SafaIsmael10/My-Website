@@ -1,0 +1,157 @@
+.projects {
+  min-height: 60vh;
+  background-color: #353839;
+  text-align: center;
+  padding: 4rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects h3 {
+  margin: 0;
+  padding-bottom: 4rem;
+  font-size: 3rem;
+}
+
+.pr-wrapper {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.pr-wrapper.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+.pr-card {
+  background-color: #888888;
+  aspect-ratio: 1 / 1.5;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pr-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pr-buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.pr-buttons-nw {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.pr-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pr-buttons button {
+  display: inline-flex;
+  width: auto;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  font-weight: 500;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pr-buttons-nw button {
+  display: inline-flex;
+  width: auto;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #000;
+  border-radius: 2rem;
+  font-weight: 500;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pr-buttons button:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+.pr-buttons-nw button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #2e2e2e;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content p {
+  text-align: left;
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

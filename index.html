@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/entry.css">
+    <link rel="stylesheet" href="./css/intro.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/experience.css">
+    <link rel="stylesheet" href="./css/carousel.css">
+    <link rel="stylesheet" href="./css/education.css">
+    <link rel="stylesheet" href="./css/certs.css">
+    <link rel="stylesheet" href="./css/skills.css">
+    <link rel="stylesheet" href="./css/cv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <section class="entry">
+        <div class="entry-name">
+            Safa Ismael
+        </div>
+        
+        <img src="../images/blossom-petal.png" class="floating-petal petal1" alt="Petal">
+        <img src="../images/blossom-petal.png" class="floating-petal petal2" alt="Petal">
+        <img src="../images/blossom-petal.png" class="floating-petal petal3" alt="Petal">
+        <img src="../images/blossom-petal.png" class="floating-petal petal4" alt="Petal">
+        <img src="../images/blossom-petal.png" class="floating-petal petal5" alt="Petal">
+        <img src="../images/blossom-petal.png" class="floating-petal petal6" alt="Petal">
+        <img src="../images/blossom-petal.png" class="floating-petal petal7" alt="Petal">
+
+        <div class="entry-leave">
+            <a href="#intro">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+
+
+    <section class="intro" id="intro">
+        <div class="about">
+            <div class="name-node">
+                <div class="name">
+                    <h1>Safa Ismael</h1>
+                </div>
+                <div class="occupation">
+                    <p>Software Developer</p>
+                    <p>Data Analyst</p>
+                    <p>Web Developer</p>
+                </div>
+                <div class="socials">
+                    <a href="https://instagram.com/safa_i10" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/safa-ismael-2586aa294" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/SafaIsmael10/My-Portfolio" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="summary">
+                <p>Hi, my name is Safa and this is my website. Have a look around to see my work and experience 😉.</p>
+            </div>
+        </div>
+        <div class="picture-box">
+            <div class="picture-container">
+                <div class="picture">
+                    <img src="./images/safa.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="projects">
+        <div>
+            <h3>Projects</h3>
+        </div>
+        <div class="pr-wrapper">
+            <div class="pr-card">
+                <img src="./images/coming-soon.png">
+            </div>
+            <div class="pr-card">
+                <img src="./images/pixel8ball.png">
+                <div class="pr-buttons">
+                    <button class="learn-more" onclick="openModal('pixel8ball-modal')">Learn More</button>
+                    <a href="https://safaismael10.github.io/Magic-8-Ball/" target="_blank" rel="noopener noreferrer">
+                        <button class="view-project">View</button>
+                    </a>
+                </div>
+            </div>
+            <div class="pr-card">
+                <img src="./images/medkit.png">
+                <div class="pr-buttons-nw">
+                    <button class="learn-more" onclick="openModal('medkit-modal')">Learn More</button>
+                    <a href="https://github.com/SafaIsmael10/My-Portfolio/tree/main/MedKit" target="_blank" rel="noopener noreferrer">
+                        <button class="view-project">View</button>
+                    </a>
+                </div>
+            </div>
+            <div class="pr-card">
+                <img src="./images/outliner.png">
+                <div class="pr-buttons">
+                    <button class="learn-more" onclick="openModal('outliner-modal')">Learn More</button>
+                    <a href="https://github.com/SafaIsmael10/My-Portfolio/tree/main/Outliner" target="_blank" rel="noopener noreferrer">
+                        <button class="view-project">View</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="pixel8ball-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('pixel8ball-modal')">&times;</span>
+            <h2>Pixball: Magic 8 Ball App</h2>
+            <p>
+                A fun little project where I recreated the Magic 8 Ball game using JavaScript.
+                <br>
+                <br>
+                Although it's beginner level and the functionality is not all that impressive,
+                it was a fun way for me to incorporate pixel art with a web app. All pixel backgrounds 
+                and sprites are made by me also.
+                <br>
+                <br>
+                There are some additional features to make the app a bit better such as text-to-voice for answers
+                and an answer history log.
+            </p>
+        </div>
+    </div>
+    <div id="medkit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('medkit-modal')">&times;</span>
+            <h3>MedKit: Medical Appointment Booking Software</h3>
+            <p>
+                This was my final year project in university. Made using PHP, HTML, CSS and JavaScript. 
+                <br>
+                <br>
+                This is a medical clinic appointment booking website which has patient and doctor sides depending on logins.
+                Bookings go to a database and are securely stored and seen by doctors for their schedule.
+                <br>
+                <br>
+                The unique feature for this was a body diagram with different information on illnesses/injuries depending on
+                which body part is clicked, this way patients can have an easier time understanding what is wrong with them, 
+                and focus on other things in the appointment, ultimately saving time.
+                <br>
+                <br>
+                There are also other features made to try save doctors time such as referral letter drafts.
+                <br>
+                <br>
+                Although not 100% complete and not being hosted anymore, 
+                it was the gateway to web development and looking into medical software development.
+            </p>
+        </div>
+    </div>
+    <div id="outliner-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('outliner-modal')">&times;</span>
+            <h3>Outliner App</h3>
+            <p>
+                A project I worked on very early into my time at university where I use the Java I learned to
+                try and make an outliner app for 5-a-side football teams to organise players using the same tree like
+                hierarchal structure found in file explorer.
+            </p>
+        </div>
+    </div>
+
+
+
+    <section class="experience">
+        <div>
+            <h3>Experience</h3>
+        </div>
+        <div class="xp-wrapper">
+            <div class="xp-top">
+                <div class="xp-logo">
+                    <img src="./images/webdev.png" alt="Web-Dev">
+                </div>
+                <div class="xp-main">
+                    <div class="text">
+                    <p>Web Developer
+                    <br>
+                    Star GP Clinic
+                    <br>
+                    Dublin, Ireland
+                    <br>
+                    03/2025 - Current</p>
+                    </div>
+                </div>
+            </div>
+            <div class="xp-bottom">
+                <p>Delivered comprehensive website maintenance and enhancement services for a medical practice, ensuring optimal performance and functionality. Key achievements include:
+                <br>
+                <br>
+                • Maintained website infrastructure and monitored system performance to ensure 100% uptime and seamless user experience.
+                <br>
+                • Developed and implemented code modifications to align with evolving business requirements and regulatory standards.
+                <br>
+                • Managed secure file transfers via FTP protocols to deploy updates and maintain version control across production environments.
+                <br>
+                • Diagnosed and resolved critical email system vulnerabilities, resulting in improved patient communication and measurable increase in online appointment bookings.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="brand-carousel">
+        <div class="carousel-wrapper">
+            <div class="carousel">
+                <img src="./images/html.png" alt="HTML">
+                <img src="./images/css.png" alt="CSS">
+                <img src="./images/js.png" alt="JavaScript">
+                <img src="./images/java.png" alt="Java">
+                <img src="./images/python.png" alt="Python">
+                <img src="./images/php.png" alt="PHP">
+                <img src="./images/github.png" alt="GitHub">
+
+                <img src="./images/html.png" alt="HTML">
+                <img src="./images/css.png" alt="CSS">
+                <img src="./images/js.png" alt="JavaScript">
+                <img src="./images/java.png" alt="Java">
+                <img src="./images/python.png" alt="Python">
+                <img src="./images/php.png" alt="PHP">
+                <img src="./images/github.png" alt="GitHub">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="education">
+        <div>
+            <h3>Education</h3>
+        </div>
+        <div class="ed-wrapper">
+            <div class="study">
+                <p class="degree">Bachelor of Science: Computer Science</p>
+                <p class="institution">Kingston University</p>
+                <p class="study-time">09/2021 - 07/2024</p>
+                <p class="results">2:1</p>
+            </div>
+            <div class="study">
+                <p class="degree">Irish Leaving Certificate</p>
+                <p class="institution">Kishoge Community College</p>
+                <p class="study-time">09/2018 - 07/2020</p>
+                <p class="results">542 Points</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="certs">
+        <div>
+            <h3>Certificates & Licenses</h3>
+        </div>
+        <div class="certs-wrapper">
+            <p><i class="fa-solid fa-medal"></i> AWS Cloud Essentials Badge</p>
+            <p><i class="fa-brands fa-react"></i> ICDL Cyber Security Certificate</p>
+            <p></p><i class="fa-solid fa-id-badge"></i> PSA Guarding License</p>
+        </div>
+    </section>
+
+
+
+    <section class="skills">
+        <div>
+            <h3>Skills</h3>
+        </div>
+        <div class="skills-wrapper">
+            <div class="skills-tabs">
+                <button data-skill="arsenal" class="active">Tools</button>
+                <button data-skill="technical">Technical</button>
+                <button data-skill="soft">Soft</button>
+                <button data-skill="languages">Languages</button>
+            </div>
+            <div class="skills-content">
+                <div class="arsenal skill-group active" data-skill="arsenal">
+                    <p>Programming Languages</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                    </ul>
+                    <p>Frameworks & Libraries</p>
+                    <ul>
+                        <li>React</li>
+                        <li>React Native</li>
+                        <li>Node.js</li>
+                    </ul>
+                    <p>Tools</p>
+                    <ul>
+                        <li>GitHub</li>
+                        <li>Figma</li>
+                        <li>Tableau</li>
+                    </ul>
+                </div>
+                <div class="technical-skills skill-group" data-skill="technical">
+                    <p>Technical Skills</p>
+                    <ul>
+                        <li>Software Development</li>
+                        <li>Web Development</li>
+                        <li>App Development</li>
+                        <li>Data Analysis</li>
+                        <li>Testing & Test Cases</li>
+                        <li>Analysis & Use Cases</li>
+                        <li>AWS</li>
+                        <li>Microsoft Office</li>
+                        <li>Computer Hardware</li>
+                    </ul>
+                </div>
+                <div class="soft-skills skill-group" data-skill="soft">
+                    <p>Soft Skills</p>
+                    <ul>
+                        <li>Communication</li>
+                        <li>Organization</li>
+                        <li>Teamwork</li>
+                        <li>Problem Solving</li>
+                        <li>Critical Thinking</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+                <div class="languages skill-group" data-skill="languages">
+                    <p>Languages</p>
+                    <div class="languages-cards">
+                        <p class="card english">English</p>
+                        <p class="card arabic">Arabic</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!--
+    <section class="interests">
+        <div>
+            <h3>Interests</h3>
+        </div>
+    </section>
+-->
+
+
+    <section class="cv">
+        <a href="./safa-ismael-cv.pdf" download class="cv-button">
+            <span class="cv-icon">
+                <i class="fas fa-file-download"></i>
+            </span>
+            <span class="cv-text">
+                Download CV
+            </span>
+        </a>
+    </section>
+
+
+
+    <script src="./javascript/transitions.js"></script>
+    <script src="./javascript/occupation-animation.js"></script>
+    <script src="./javascript/type-effect.js"></script>
+    <script src="./javascript/carousel.js"></script>
+    <script src="./javascript/experience-list.js"></script>
+    <script src="./javascript/skills-tab-switch.js"></script>
+    <script src="./javascript/modal.js"></script>
+    <script src="./javascript/hero-carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+.education {
+  min-height: 60vh;
+  background-color: #353839;
+  text-align: left;
+  padding: 4rem;
+
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.education h3 {
+  margin: 0;
+  padding-bottom: 4rem;
+  font-size: 3rem;
+}
+
+.ed-wrapper {
+  min-height: 40vh;
+  width: 30vw;
+  padding: 2rem;
+  text-align: left;
+  border-radius: 1rem;
+
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease;
+}
+
+.ed-wrapper.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+.study {
+  display: grid;
+  margin-bottom: 3rem;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 0rem 2rem;
+  border-radius: 0.5rem;
+
+}
+
+.degree {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.institution {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.study-time {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.results {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+/* ✅ Responsive: stack into a single column on small screens */
+@media (max-width: 768px) {
+  .study {
+    grid-template-columns: 1fr; /* single column */
+    grid-template-rows: auto auto auto auto; /* four rows */
+    gap: 0rem; /* tighter vertical gap */
+  }
+
+  /* Make each item take full width */
+  .degree,
+  .institution,
+  .study-time,
+  .results {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

@@ -1,0 +1,140 @@
+.entry {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #77A8A8;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.entry-name {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  font-family: 'Adoria', sans-serif;
+  font-size: clamp(2rem, 6vw, 10rem);
+  font-weight: 800;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.entry-leave {
+  position: absolute;
+  bottom: 7%;
+  right: 5%;
+  z-index: 2;
+}
+
+.entry-leave i {
+  font-size: clamp(2rem, 6vw, 10rem);
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.entry-leave i:hover {
+  transform: translateY(5px);
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+.floating-petal {
+  position: absolute;
+  width: 80px; /* adjust size */
+  top: -100px; /* start off-screen */
+  left: 50%;  /* starting horizontal position */
+  z-index: 1;
+}
+
+.petal1 {
+  left: 10%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+  animation: fall-petal 8s linear 0s infinite;
+}
+.petal2 {
+  left: 40%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation: float-petal 10s linear 2s infinite;
+}
+.petal3 {
+  left: 70%;
+  animation-duration: 9s;
+  animation-delay: 1s;
+  animation: drop-petal 9s linear 1s infinite;
+}
+.petal4 {
+  left: 25%;
+  animation-duration: 11s;
+  animation-delay: 3s;
+  animation: fall-petal 11s linear 3s infinite;
+}
+.petal5 {
+  left: 85%;
+  animation-duration: 12s;
+  animation-delay: 4s;
+  animation: float-petal 12s linear 4s infinite;
+}
+.petal6 {
+  left: 15%;
+  animation-duration: 13s;
+  animation-delay: 5s;
+  animation: drop-petal 13s linear 5s infinite;
+}
+.petal7 {
+  left: 55%;
+  animation-duration: 14s;
+  animation-delay: 6s;
+  animation: fall-petal 14s linear 6s infinite;
+}
+
+@keyframes fall-petal {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100px) translateY(200px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(-100px) translateY(600px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float-petal {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(200px) translateY(100px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(-200px) translateY(200px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes drop-petal {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50px) translateY(300px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0px) translateY(800px) rotate(360deg);
+    opacity: 0;
+  }
+}

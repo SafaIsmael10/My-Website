@@ -1,0 +1,101 @@
+.experience {
+  min-height: 60vh;
+  background-color: #353839;
+  text-align: center;
+  padding: 4rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.experience h3 {
+  margin: 0;
+  padding-bottom: 4rem;
+  font-size: 3rem;
+}
+
+.xp-wrapper {
+  min-height: 60vh;
+  min-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.xp-wrapper.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+.xp-top {
+  flex: 1;
+  display: flex;
+}
+
+.xp-logo {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden; /* keeps image from escaping */
+}
+
+.xp-logo img {
+  max-width: 50%; /* ✅ image will never exceed 70% of cxp-logo width */
+  max-height: 50%; /* ✅ image will never exceed 70% of cxp-logo height */
+  object-fit: contain; /* ✅ keeps aspect ratio intact */
+}
+
+.xp-main {
+  display: flex;
+  text-align: left;
+  flex: 1;
+  padding: 1rem;
+  justify-content: left;
+  align-items: center;
+}
+
+.xp-bottom {
+  flex: 2;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .xp-wrapper {
+    flex-direction: column;
+    min-height: 40vh;
+  }
+
+  .xp-top {
+    flex: 1 1 0;
+  }
+
+  .xp-bottom {
+    flex: 2 1 0;
+  }
+}
+
+.experience::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 2px;
+  background: #f0f0f0;
+  border-radius: 2rem;
+}
